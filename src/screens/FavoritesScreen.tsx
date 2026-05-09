@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   StyleSheet,
-  Text,
   View,
   StatusBar,
   ScrollView,
@@ -36,7 +35,7 @@ const FavoritesScreen = ({navigation}: any) => {
           <View style={styles.ItemContainer}>
             <HeaderBar title="Favourites" />
 
-            {FavoritesList.length == 0 ? (
+            {FavoritesList.length === 0 ? (
               <EmptyListAnimation title={'No Favourites'} />
             ) : (
               <View style={styles.ListItemContainer}>

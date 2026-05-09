@@ -21,7 +21,7 @@ import PaymentFooter from '../components/PaymentFooter';
 
 const DetailsScreen = ({navigation, route}: any) => {
   const ItemOfIndex = useStore((state: any) =>
-    route.params.type == 'Coffee' ? state.CoffeeList : state.BeanList,
+    route.params.type === 'Coffee' ? state.CoffeeList : state.BeanList,
   )[route.params.index];
   const addToFavoriteList = useStore((state: any) => state.addToFavoriteList);
   const deleteFromFavoriteList = useStore(
@@ -30,7 +30,7 @@ const DetailsScreen = ({navigation, route}: any) => {
   const addToCart = useStore((state: any) => state.addToCart);
   const calculateCartPrice = useStore((state: any) => state.calculateCartPrice);
 
-  const [price, setPrice] = useState(ItemOfIndex.prices[0]);
+  const [currentPrice, setCurrentPrice] = useState(ItemOfIndex.prices[0]);
   const [fullDesc, setFullDesc] = useState(false);
 
   const ToggleFavourite = (favourite: boolean, type: string, id: string) => {
@@ -114,13 +114,13 @@ const DetailsScreen = ({navigation, route}: any) => {
               <TouchableOpacity
                 key={data.size}
                 onPress={() => {
-                  setPrice(data);
+                  setCurrentPrice(data);
                 }}
                 style={[
                   styles.SizeBox,
                   {
                     borderColor:
-                      data.size == price.size
+                      data.size === price.size
                         ? COLORS.primaryOrangeHex
                         : COLORS.primaryDarkGreyHex,
                   },
@@ -130,11 +130,11 @@ const DetailsScreen = ({navigation, route}: any) => {
                     styles.SizeText,
                     {
                       fontSize:
-                        ItemOfIndex.type == 'Bean'
+                        ItemOfIndex.type === 'Bean'
                           ? FONTSIZE.size_14
                           : FONTSIZE.size_16,
                       color:
-                        data.size == price.size
+                        data.size === price.size
                           ? COLORS.primaryOrangeHex
                           : COLORS.secondaryLightGreyHex,
                     },
@@ -146,7 +146,7 @@ const DetailsScreen = ({navigation, route}: any) => {
           </View>
         </View>
         <PaymentFooter
-          price={price}
+          price={currentPrice}
           buttonTitle="Add to Cart"
           buttonPressHandler={() => {
             addToCarthandler({
@@ -157,7 +157,7 @@ const DetailsScreen = ({navigation, route}: any) => {
               imagelink_square: ItemOfIndex.imagelink_square,
               special_ingredient: ItemOfIndex.special_ingredient,
               type: ItemOfIndex.type,
-              price: price,
+              price: currentPrice,
             });
           }}
         />

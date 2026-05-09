@@ -42,7 +42,7 @@ const CartItem: React.FC<CartItemProps> = ({
 }) => {
   return (
     <View>
-      {prices.length != 1 ? (
+      {prices.length !== 1 ? (
         <LinearGradient
           start={{x: 0, y: 0}}
           end={{x: 1, y: 1}}
@@ -73,7 +73,7 @@ const CartItem: React.FC<CartItemProps> = ({
                       styles.SizeText,
                       {
                         fontSize:
-                          type == 'Bean' ? FONTSIZE.size_12 : FONTSIZE.size_16,
+                          type === 'Bean' ? FONTSIZE.size_12 : FONTSIZE.size_16,
                       },
                     ]}>
                     {data.size}
@@ -140,7 +140,7 @@ const CartItem: React.FC<CartItemProps> = ({
                     styles.SizeText,
                     {
                       fontSize:
-                        type == 'Bean' ? FONTSIZE.size_12 : FONTSIZE.size_16,
+                        type === 'Bean' ? FONTSIZE.size_12 : FONTSIZE.size_16,
                     },
                   ]}>
                   {prices[0].size}
