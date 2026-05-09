@@ -2,7 +2,8 @@ const CoffeeData = [
   {
     id: 'C1',
     name: 'Nasi',
-    description: `Nasi putih hangat dengan tambahan bawang goreng di atasnya. Sederhana, namun lezat.`,
+    description:
+      'Nasi putih hangat dengan tambahan bawang goreng di atasnya. Sederhana, namun lezat.',
     roasted: 'Tidak Ada',
     imagelink_square: require('../assets/coffee_assets/americano/square/americano_pic_1_square.png'),
     imagelink_portrait: require('../assets/coffee_assets/americano/portrait/americano_pic_1_portrait.png'),
@@ -22,7 +23,8 @@ const CoffeeData = [
   {
     id: 'C2',
     name: 'Ayam Bakar',
-    description: `Ayam bakar berbumbu rempah khas dengan cita rasa gurih dan sedikit manis.`,
+    description:
+      'Ayam bakar berbumbu rempah khas dengan cita rasa gurih dan sedikit manis.',
     roasted: 'Dibakar',
     imagelink_square: require('../assets/coffee_assets/americano/square/americano_pic_2_square.png'),
     imagelink_portrait: require('../assets/coffee_assets/americano/portrait/americano_pic_2_portrait.png'),
@@ -42,7 +44,8 @@ const CoffeeData = [
   {
     id: 'C3',
     name: 'Ayam Goreng',
-    description: `Ayam goreng renyah dengan cita rasa gurih, cocok untuk makan siang.`,
+    description:
+      'Ayam goreng renyah dengan cita rasa gurih, cocok untuk makan siang.',
     roasted: 'Digoreng',
     imagelink_square: require('../assets/coffee_assets/americano/square/americano_pic_3_square.png'),
     imagelink_portrait: require('../assets/coffee_assets/americano/portrait/americano_pic_3_portrait.png'),
@@ -62,7 +65,7 @@ const CoffeeData = [
   {
     id: 'C4',
     name: 'Ikan Goreng',
-    description: `Ikan segar digoreng dengan bumbu sederhana hingga renyah.`,
+    description: 'Ikan segar digoreng dengan bumbu sederhana hingga renyah.',
     roasted: 'Digoreng',
     imagelink_square: require('../assets/coffee_assets/black_coffee/square/black_coffee_pic_1_square.png'),
     imagelink_portrait: require('../assets/coffee_assets/black_coffee/portrait/black_coffee_pic_1_portrait.png'),
@@ -271,7 +274,8 @@ const CoffeeData = [
   {
     id: 'C14',
     name: 'Tempe Orek',
-    description: `Tempe Orek adalah tempe yang dipotong kecil-kecil dan dimasak dengan bumbu kecap manis.`,
+    description:
+      'Tempe Orek adalah tempe yang dipotong kecil-kecil dan dimasak dengan bumbu kecap manis.',
     roasted: 'Tidak dipanggang',
     imagelink_square: require('../assets/coffee_assets/latte/square/latte_pic_2_square.png'),
     imagelink_portrait: require('../assets/coffee_assets/latte/portrait/latte_pic_2_portrait.png'),

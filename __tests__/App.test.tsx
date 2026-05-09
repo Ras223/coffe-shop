@@ -1,17 +1,32 @@
-/**
- * @format
- */
-
-import 'react-native';
 import React from 'react';
+import {render} from '@testing-library/react-native';
 import App from '../App';
 
-// Note: import explicitly to use the types shiped with jest.
-import {it} from '@jest/globals';
+jest.mock('@react-navigation/native', () => {
+  return {
+    ...jest.requireActual('@react-navigation/native'),
+    NavigationContainer: ({children}) => <>{children}</>,
+  };
+});
 
-// Note: test renderer must be required after react-native.
-import renderer from 'react-test-renderer';
+jest.mock('@react-navigation/native-stack', () => {
+  return {
+    createNativeStackNavigator: () => ({
+      Navigator: ({children}) => <>{children}</>,
+      Screen: ({children}) => <>{children}</>,
+    }),
+  };
+});
+
+jest.mock('@react-navigation/bottom-tabs', () => {
+  return {
+    createBottomTabNavigator: () => ({
+      Navigator: ({children}) => <>{children}</>,
+      Screen: ({children}) => <>{children}</>,
+    }),
+  };
+});
 
 it('renders correctly', () => {
-  renderer.create(<App />);
+  render(<App />);
 });

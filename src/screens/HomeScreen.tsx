@@ -27,7 +27,7 @@ import {Dimensions} from 'react-native';
 const getCategoriesFromData = (data: any) => {
   let temp: any = {};
   for (let i = 0; i < data.length; i++) {
-    if (temp[data[i].name] == undefined) {
+    if (temp[data[i].name] === undefined) {
       temp[data[i].name] = 1;
     } else {
       temp[data[i].name]++;
@@ -39,10 +39,10 @@ const getCategoriesFromData = (data: any) => {
 };
 
 const getCoffeeList = (category: string, data: any) => {
-  if (category == 'All') {
+  if (category === 'All') {
     return data;
   } else {
-    let coffeelist = data.filter((item: any) => item.name == category);
+    let coffeelist = data.filter((item: any) => item.name === category);
     return coffeelist;
   }
 };
@@ -53,7 +53,7 @@ const HomeScreen = ({navigation}: any) => {
   const addToCart = useStore((state: any) => state.addToCart);
   const calculateCartPrice = useStore((state: any) => state.calculateCartPrice);
 
-  const [categories, setCategories] = useState(
+  const [categories, _setCategories] = useState(
     getCategoriesFromData(CoffeeList),
   );
   const [searchText, setSearchText] = useState('');
@@ -69,7 +69,7 @@ const HomeScreen = ({navigation}: any) => {
   const tabBarHeight = useBottomTabBarHeight();
 
   const searchCoffee = (search: string) => {
-    if (search != '') {
+    if (search !== '') {
       ListRef?.current?.scrollToOffset({
         animated: true,
         offset: 0,
@@ -204,13 +204,13 @@ const HomeScreen = ({navigation}: any) => {
                 <Text
                   style={[
                     styles.CategoryText,
-                    categoryIndex.index == index
+                    categoryIndex.index === index
                       ? {color: COLORS.secondaryBlackRGBA}
                       : {},
                   ]}>
                   {data}
                 </Text>
-                {categoryIndex.index == index ? (
+                {categoryIndex.index === index ? (
                   <View style={styles.ActiveCategory} />
                 ) : (
                   <></>

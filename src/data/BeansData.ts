@@ -2,7 +2,7 @@ const BeansData = [
   {
     id: 'B1',
     name: 'Es Teh',
-    description: `Es Teh yang menyegarkan, sempurna untuk diminum kapan saja.`,
+    description: 'Es Teh yang menyegarkan, sempurna untuk diminum kapan saja.',
     roasted: 'Medium Roasted',
     imagelink_square: require('../assets/coffee_assets/robusta_coffee_beans/robusta_coffee_beans_square.png'),
     imagelink_portrait: require('../assets/coffee_assets/robusta_coffee_beans/robusta_coffee_beans_portrait.png'),
@@ -22,7 +22,8 @@ const BeansData = [
   {
     id: 'B2',
     name: 'Jeruk Peras',
-    description: `Jeruk Peras segar alami yang memberikan rasa manis dan asam yang sempurna.`,
+    description:
+      'Jeruk Peras segar alami yang memberikan rasa manis dan asam yang sempurna.',
     roasted: 'Medium Roasted',
     imagelink_square: require('../assets/coffee_assets/arabica_coffee_beans/arabica_coffee_beans_square.png'),
     imagelink_portrait: require('../assets/coffee_assets/arabica_coffee_beans/arabica_coffee_beans_portrait.png'),
@@ -42,7 +43,8 @@ const BeansData = [
   {
     id: 'B3',
     name: 'Air Putih',
-    description: `Air Putih murni yang menyegarkan untuk menjaga hidrasi tubuh Anda.`,
+    description:
+      'Air Putih murni yang menyegarkan untuk menjaga hidrasi tubuh Anda.',
     roasted: 'Medium Roasted',
     imagelink_square: require('../assets/coffee_assets/liberica_coffee_beans/liberica_coffee_beans_square.png'),
     imagelink_portrait: require('../assets/coffee_assets/liberica_coffee_beans/liberica_coffee_beans_portrait.png'),
@@ -62,7 +64,7 @@ const BeansData = [
   {
     id: 'B4',
     name: 'Kopi',
-    description: `Kopi nikmat dengan aroma khas untuk menemani hari Anda.`,
+    description: 'Kopi nikmat dengan aroma khas untuk menemani hari Anda.',
     roasted: 'Medium Roasted',
     imagelink_square: require('../assets/coffee_assets/excelsa_coffee_beans/excelsa_coffee_beans_square.png'),
     imagelink_portrait: require('../assets/coffee_assets/excelsa_coffee_beans/excelsa_coffee_beans_portrait.png'),

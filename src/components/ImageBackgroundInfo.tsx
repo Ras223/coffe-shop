@@ -40,11 +40,11 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
   id,
   favourite,
   name,
-  special_ingredient,
-  ingredients,
+  _special_ingredient,
+  _ingredients,
   average_rating,
   ratings_count,
-  roasted,
+  _roasted,
   BackHandler,
   ToggleFavourite,
 }) => {
@@ -101,7 +101,7 @@ const ImageBackgroundInfo: React.FC<ImageBackgroundInfoProps> = ({
               <View>
                 <Text style={styles.ItemTitleText}>{name}</Text>
               </View>
-              <View style={styles.ItemPropertiesContainer}></View>
+              <View style={styles.ItemPropertiesContainer} />
             </View>
             <View style={styles.InfoContainerRow}>
               <View style={styles.RatingContainer}>
